@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapeamento de Velocidade de Espaço Nave</title>
+    <link rel="stylesheet" type="text/css"  href="./style.css">
+</head>
+<body>
+    <section class="sectionone" id="sectionone">
+        <h1 class="center">Bem vindo ao sistema da sua nave</h1>
+        <div class="center">
+            <form action="">
+            <label for="nome">Insira o nome da sua Nave</label><br>
+            <input type="text" name="" id="nome"  required><br>
+            <label for="tipo">Escolha o tipo da sua Nave</label><br>
+            <input list="tipos" name="tipo" id="tipo" required>
+            <datalist id="tipos">
+                <option value="Ataque">
+                <option value="Defesa">
+                <option value="Resgate">
+                <option value="Reconhecimento">            
+            </datalist>
+            <label for="velocity">Insira a velocidade maxima da sua Nave</label><br>
+            <div class="inputrange">
+            <input type="range"  id="velocity" min="0" max="100" oninput="display.value=value" onchange="display.value=value" required>
+            <input class="lenght" type="text" id="display" value="0" oninput="vol.value=value" onchange="vol.value=value"><br>
+            </div>
+            <input class="btn" type="submit" id="send" value="Enviar">
+        </form>
+        </div>
+    </section>
+    <section class="sectiontwo" id="sectiontwo" style="display:none">
+        <div class="sec2"><h1>Sistema da <span id="nomenave">""</span> iniciado</h1><br>
+        <h2>A sua nave tem a função de <span id="tiponave">""</span></h2><br>
+        <h2>A sua velocidade maxima é de <span id="velmaxnave">""</span> KM/s</h2><br>
+        <button class="btn"onclick="speedUp()">Acelerar</button> <button class="btn"onclick="speedDown()">Parar</button>
+        </div>
+    </section>
+
+
+
+<script src="./script.js"></script>
+</body>
+</html>
